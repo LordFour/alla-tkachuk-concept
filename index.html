@@ -309,6 +309,15 @@ figure{margin:0}
 .sw code,.sw span{font-size:14px;color:var(--ink-2)}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* language switcher */
+.lang{display:flex;margin-left:auto;font-family:var(--f-wide);font-size:12px;font-weight:600;letter-spacing:.14em}
+.lang a{min-width:38px;min-height:44px;display:grid;place-items:center;text-decoration:none;color:var(--ink-2);transition:color .3s}
+.lang a:hover{color:var(--mag-txt)}
+.lang a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:6px}
+.hdr .icons{margin-left:0}
+@media(max-width:759px){.hdr .icons{display:none}}
+@media(min-width:1040px) and (max-width:1279px){.hdr .icons{display:none}}
 </style>
 </head>
 <body>
@@ -331,6 +340,7 @@ figure{margin:0}
 <header class="hdr" id="hdr"><div class="wrap">
   <a class="logo" href="#top" aria-label="Алла Ткачук, наверх">Алла<br>Ткачук</a>
   <nav class="nav" aria-label="Разделы"><a href="#about">О мастере</a><a href="#services">Услуги</a><a href="#curls">Био-завивка</a><a href="#works">Работы</a><a href="#education">Обучение</a><a href="#contact">Контакты</a></nav>
+  <nav class="lang" aria-label="Язык"><a href="./" hreflang="ru" lang="ru" aria-current="page">RU</a><a href="ro/" hreflang="ro" lang="ro">RO</a><a href="en/" hreflang="en" lang="en">EN</a></nav>
   <div class="icons">
     <a class="ic" href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
     <a class="ic" href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-tg"/></svg></a>
